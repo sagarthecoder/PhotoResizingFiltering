@@ -14,6 +14,10 @@
 		FAB33EB626A6AC7C0050FB67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB33EB426A6AC7C0050FB67 /* LaunchScreen.storyboard */; };
 		FAB33EE926A6AED10050FB67 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB33EE726A6AED10050FB67 /* HomeViewController.swift */; };
 		FAB33EEA26A6AED10050FB67 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB33EE826A6AED10050FB67 /* HomeViewController.xib */; };
+		FAB33EF226A6D5840050FB67 /* ResizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB33EF126A6D5840050FB67 /* ResizeView.swift */; };
+		FAB33EF526A6D59B0050FB67 /* ResizeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB33EF426A6D59B0050FB67 /* ResizeView.xib */; };
+		FAB33EF926A6E4E70050FB67 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB33EF826A6E4E70050FB67 /* Photos.framework */; };
+		FAB33EFB26A6E6910050FB67 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB33EFA26A6E6910050FB67 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		FAB33EB726A6AC7C0050FB67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAB33EE726A6AED10050FB67 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FAB33EE826A6AED10050FB67 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FAB33EF126A6D5840050FB67 /* ResizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeView.swift; sourceTree = "<group>"; };
+		FAB33EF426A6D59B0050FB67 /* ResizeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResizeView.xib; sourceTree = "<group>"; };
+		FAB33EF826A6E4E70050FB67 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		FAB33EFA26A6E6910050FB67 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB33EFB26A6E6910050FB67 /* MobileCoreServices.framework in Frameworks */,
+				FAB33EF926A6E4E70050FB67 /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +54,7 @@
 			children = (
 				FAB33EA826A6AC730050FB67 /* Photo-Resizing-Filtering */,
 				FAB33EA726A6AC730050FB67 /* Products */,
+				FAB33EF726A6E4E70050FB67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +91,7 @@
 		FAB33EE526A6AE880050FB67 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				FAB33EEE26A6D2A80050FB67 /* Views */,
 				FAB33EE626A6AEAF0050FB67 /* HomeViewController */,
 			);
 			path = HomePage;
@@ -92,6 +104,40 @@
 				FAB33EE826A6AED10050FB67 /* HomeViewController.xib */,
 			);
 			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		FAB33EEE26A6D2A80050FB67 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAB33EF026A6D2CB0050FB67 /* FilterView */,
+				FAB33EEF26A6D2B60050FB67 /* ResizeView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FAB33EEF26A6D2B60050FB67 /* ResizeView */ = {
+			isa = PBXGroup;
+			children = (
+				FAB33EF126A6D5840050FB67 /* ResizeView.swift */,
+				FAB33EF426A6D59B0050FB67 /* ResizeView.xib */,
+			);
+			path = ResizeView;
+			sourceTree = "<group>";
+		};
+		FAB33EF026A6D2CB0050FB67 /* FilterView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FilterView;
+			sourceTree = "<group>";
+		};
+		FAB33EF726A6E4E70050FB67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAB33EFA26A6E6910050FB67 /* MobileCoreServices.framework */,
+				FAB33EF826A6E4E70050FB67 /* Photos.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +199,7 @@
 			files = (
 				FAB33EB626A6AC7C0050FB67 /* LaunchScreen.storyboard in Resources */,
 				FAB33EB326A6AC7C0050FB67 /* Assets.xcassets in Resources */,
+				FAB33EF526A6D59B0050FB67 /* ResizeView.xib in Resources */,
 				FAB33EB126A6AC730050FB67 /* Main.storyboard in Resources */,
 				FAB33EEA26A6AED10050FB67 /* HomeViewController.xib in Resources */,
 			);
@@ -165,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB33EF226A6D5840050FB67 /* ResizeView.swift in Sources */,
 				FAB33EAE26A6AC730050FB67 /* ViewController.swift in Sources */,
 				FAB33EAA26A6AC730050FB67 /* AppDelegate.swift in Sources */,
 				FAB33EE926A6AED10050FB67 /* HomeViewController.swift in Sources */,
@@ -322,6 +370,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sagar.RF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -342,6 +391,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sagar.RF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

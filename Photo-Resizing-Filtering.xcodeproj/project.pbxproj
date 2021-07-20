@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		FAB33EAA26A6AC730050FB67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB33EA926A6AC730050FB67 /* AppDelegate.swift */; };
-		FAB33EAC26A6AC730050FB67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB33EAB26A6AC730050FB67 /* SceneDelegate.swift */; };
 		FAB33EAE26A6AC730050FB67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB33EAD26A6AC730050FB67 /* ViewController.swift */; };
 		FAB33EB126A6AC730050FB67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB33EAF26A6AC730050FB67 /* Main.storyboard */; };
 		FAB33EB326A6AC7C0050FB67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB33EB226A6AC7C0050FB67 /* Assets.xcassets */; };
 		FAB33EB626A6AC7C0050FB67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB33EB426A6AC7C0050FB67 /* LaunchScreen.storyboard */; };
+		FAB33EE926A6AED10050FB67 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB33EE726A6AED10050FB67 /* HomeViewController.swift */; };
+		FAB33EEA26A6AED10050FB67 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB33EE826A6AED10050FB67 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FAB33EA626A6AC730050FB67 /* Photo-Resizing-Filtering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo-Resizing-Filtering.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB33EA926A6AC730050FB67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAB33EAB26A6AC730050FB67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FAB33EAD26A6AC730050FB67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAB33EB026A6AC730050FB67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAB33EB226A6AC7C0050FB67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAB33EB526A6AC7C0050FB67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAB33EB726A6AC7C0050FB67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB33EE726A6AED10050FB67 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FAB33EE826A6AED10050FB67 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +58,8 @@
 		FAB33EA826A6AC730050FB67 /* Photo-Resizing-Filtering */ = {
 			isa = PBXGroup;
 			children = (
+				FAB33EE426A6AE760050FB67 /* Modules */,
 				FAB33EA926A6AC730050FB67 /* AppDelegate.swift */,
-				FAB33EAB26A6AC730050FB67 /* SceneDelegate.swift */,
 				FAB33EAD26A6AC730050FB67 /* ViewController.swift */,
 				FAB33EAF26A6AC730050FB67 /* Main.storyboard */,
 				FAB33EB226A6AC7C0050FB67 /* Assets.xcassets */,
@@ -65,6 +67,31 @@
 				FAB33EB726A6AC7C0050FB67 /* Info.plist */,
 			);
 			path = "Photo-Resizing-Filtering";
+			sourceTree = "<group>";
+		};
+		FAB33EE426A6AE760050FB67 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FAB33EE526A6AE880050FB67 /* HomePage */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FAB33EE526A6AE880050FB67 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				FAB33EE626A6AEAF0050FB67 /* HomeViewController */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		FAB33EE626A6AEAF0050FB67 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FAB33EE726A6AED10050FB67 /* HomeViewController.swift */,
+				FAB33EE826A6AED10050FB67 /* HomeViewController.xib */,
+			);
+			path = HomeViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +154,7 @@
 				FAB33EB626A6AC7C0050FB67 /* LaunchScreen.storyboard in Resources */,
 				FAB33EB326A6AC7C0050FB67 /* Assets.xcassets in Resources */,
 				FAB33EB126A6AC730050FB67 /* Main.storyboard in Resources */,
+				FAB33EEA26A6AED10050FB67 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +167,7 @@
 			files = (
 				FAB33EAE26A6AC730050FB67 /* ViewController.swift in Sources */,
 				FAB33EAA26A6AC730050FB67 /* AppDelegate.swift in Sources */,
-				FAB33EAC26A6AC730050FB67 /* SceneDelegate.swift in Sources */,
+				FAB33EE926A6AED10050FB67 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,12 +315,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28T5VPKKDG;
 				INFOPLIST_FILE = "Photo-Resizing-Filtering/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sagar.RF.Photo-Resizing-Filtering";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sagar.RF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,12 +335,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X5894GC9HK;
 				INFOPLIST_FILE = "Photo-Resizing-Filtering/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sagar.RF.Photo-Resizing-Filtering";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sagar.RF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

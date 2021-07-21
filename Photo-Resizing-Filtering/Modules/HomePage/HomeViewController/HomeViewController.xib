@@ -35,6 +35,10 @@
                                 <color key="titleColor" systemColor="systemTealColor"/>
                                 <color key="titleShadowColor" systemColor="systemTealColor"/>
                             </state>
+                            <state key="selected">
+                                <color key="titleColor" red="0.56862745098039214" green="0.0" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" systemColor="labelColor"/>
+                            </state>
                             <connections>
                                 <action selector="photoResizingButtonAction:" destination="-1" eventType="touchUpInside" id="qa4-UT-IDJ"/>
                             </connections>
@@ -48,6 +52,10 @@
                             <state key="normal" title="Select photo for filtering">
                                 <color key="titleColor" systemColor="systemTealColor"/>
                                 <color key="titleShadowColor" systemColor="systemIndigoColor"/>
+                            </state>
+                            <state key="selected">
+                                <color key="titleColor" red="0.56862745098039214" green="0.0" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" systemColor="labelColor"/>
                             </state>
                             <connections>
                                 <action selector="photoFilteringButtonAction:" destination="-1" eventType="touchUpInside" id="Nk3-1g-hs5"/>
@@ -85,6 +93,9 @@
         </view>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

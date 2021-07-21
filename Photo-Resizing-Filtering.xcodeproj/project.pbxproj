@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA48A42A26A7EB3E00AADD40 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA48A42926A7EB3E00AADD40 /* FilterView.swift */; };
+		FA48A42D26A7EB4E00AADD40 /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA48A42C26A7EB4E00AADD40 /* FilterView.xib */; };
+		FA48A43126A80D8700AADD40 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA48A43026A80D8700AADD40 /* Filter.swift */; };
 		FAB33EAA26A6AC730050FB67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB33EA926A6AC730050FB67 /* AppDelegate.swift */; };
-		FAB33EAE26A6AC730050FB67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB33EAD26A6AC730050FB67 /* ViewController.swift */; };
 		FAB33EB126A6AC730050FB67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB33EAF26A6AC730050FB67 /* Main.storyboard */; };
 		FAB33EB326A6AC7C0050FB67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB33EB226A6AC7C0050FB67 /* Assets.xcassets */; };
 		FAB33EB626A6AC7C0050FB67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB33EB426A6AC7C0050FB67 /* LaunchScreen.storyboard */; };
@@ -21,9 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA48A42926A7EB3E00AADD40 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		FA48A42C26A7EB4E00AADD40 /* FilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
+		FA48A43026A80D8700AADD40 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		FAB33EA626A6AC730050FB67 /* Photo-Resizing-Filtering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo-Resizing-Filtering.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB33EA926A6AC730050FB67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAB33EAD26A6AC730050FB67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAB33EB026A6AC730050FB67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAB33EB226A6AC7C0050FB67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAB33EB526A6AC7C0050FB67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA48A42F26A80D7400AADD40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA48A43026A80D8700AADD40 /* Filter.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FAB33E9D26A6AC730050FB67 = {
 			isa = PBXGroup;
 			children = (
@@ -71,7 +83,6 @@
 			children = (
 				FAB33EE426A6AE760050FB67 /* Modules */,
 				FAB33EA926A6AC730050FB67 /* AppDelegate.swift */,
-				FAB33EAD26A6AC730050FB67 /* ViewController.swift */,
 				FAB33EAF26A6AC730050FB67 /* Main.storyboard */,
 				FAB33EB226A6AC7C0050FB67 /* Assets.xcassets */,
 				FAB33EB426A6AC7C0050FB67 /* LaunchScreen.storyboard */,
@@ -83,6 +94,7 @@
 		FAB33EE426A6AE760050FB67 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FA48A42F26A80D7400AADD40 /* Model */,
 				FAB33EE526A6AE880050FB67 /* HomePage */,
 			);
 			path = Modules;
@@ -127,6 +139,8 @@
 		FAB33EF026A6D2CB0050FB67 /* FilterView */ = {
 			isa = PBXGroup;
 			children = (
+				FA48A42926A7EB3E00AADD40 /* FilterView.swift */,
+				FA48A42C26A7EB4E00AADD40 /* FilterView.xib */,
 			);
 			path = FilterView;
 			sourceTree = "<group>";
@@ -199,6 +213,7 @@
 			files = (
 				FAB33EB626A6AC7C0050FB67 /* LaunchScreen.storyboard in Resources */,
 				FAB33EB326A6AC7C0050FB67 /* Assets.xcassets in Resources */,
+				FA48A42D26A7EB4E00AADD40 /* FilterView.xib in Resources */,
 				FAB33EF526A6D59B0050FB67 /* ResizeView.xib in Resources */,
 				FAB33EB126A6AC730050FB67 /* Main.storyboard in Resources */,
 				FAB33EEA26A6AED10050FB67 /* HomeViewController.xib in Resources */,
@@ -213,8 +228,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB33EF226A6D5840050FB67 /* ResizeView.swift in Sources */,
-				FAB33EAE26A6AC730050FB67 /* ViewController.swift in Sources */,
+				FA48A43126A80D8700AADD40 /* Filter.swift in Sources */,
 				FAB33EAA26A6AC730050FB67 /* AppDelegate.swift in Sources */,
+				FA48A42A26A7EB3E00AADD40 /* FilterView.swift in Sources */,
 				FAB33EE926A6AED10050FB67 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

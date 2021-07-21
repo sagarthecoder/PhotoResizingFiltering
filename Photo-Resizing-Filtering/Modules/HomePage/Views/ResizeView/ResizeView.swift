@@ -76,7 +76,7 @@ class ResizeView: UIView, UITextFieldDelegate {
         customWidthTextField.keyboardType = .numberPad
         customWidthTextField.delegate = self
         
-        customHeightTextField.placeholder = "Width pixel"
+        customHeightTextField.placeholder = "Height pixel"
         customHeightTextField.font = UIFont.systemFont(ofSize: 15)
         customHeightTextField.borderStyle = UITextField.BorderStyle.roundedRect
         customHeightTextField.autocorrectionType = UITextAutocorrectionType.no
@@ -95,6 +95,11 @@ class ResizeView: UIView, UITextFieldDelegate {
             fatalError("SomeThing is wrong")
            // return
         }
+        if(widthValue <= 0 || heightValue <= 0) {
+//            let alertController = UIAlertController(title: "Save error", message: "Width or Height value cannot be zero or negative", preferredStyle: .alert)
+//            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            return
+        }
          let resizedImage : UIImage? = self.resizeImage(image: self.image!, newWidth: widthValue, newHeight: heightValue)!
         if resizedImage != nil {
             delegate?.getPhotoToSave(image: resizedImage!)
@@ -107,7 +112,6 @@ class ResizeView: UIView, UITextFieldDelegate {
         image.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-
         return newImage
     }
     

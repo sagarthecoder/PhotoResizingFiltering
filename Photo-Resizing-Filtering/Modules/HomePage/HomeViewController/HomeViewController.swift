@@ -10,7 +10,7 @@ import Photos
 import CoreServices
 
 class HomeViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate, SavePhotoToLibraryDelegate {
-
+    
     @IBOutlet weak var photoResizingButton: UIButton!
     
     @IBOutlet weak var photoFilteringButton: UIButton!
@@ -55,15 +55,15 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate & UI
             picker.dismiss(animated: true, completion: nil)
             return
         }
-        //DispatchQueue.global(qos: .userInitiated).async {
-          //  DispatchQueue.main.async {
+        DispatchQueue.global(qos: .userInitiated).async {
+            DispatchQueue.main.async {
                 if(self.photoResizingButton.isSelected) {
                     self.setResizeViewAsSubView(selectedImage: selectedImage)
                 } else if(self.photoFilteringButton.isSelected) {
                     self.setFilterViewAsSubView(selectedImage: selectedImage)
                 }
-          //  }
-        //}
+            }
+        }
         self.dismiss(animated: true, completion: nil)
         
         
@@ -82,6 +82,12 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate & UI
     
     private func setFilterViewAsSubView(selectedImage : UIImage) {
         self.removeAllSubViews()
+        let filterView = FilterView(frame: self.storeView.bounds)
+        filterView.image = selectedImage
+        filterView.delegate = self
+        filterView.processing()
+        filterView.layoutIfNeeded()
+        self.storeView.addSubview(filterView)
     }
     
     private func removeAllSubViews() {
@@ -105,5 +111,5 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate & UI
             present(alertController, animated: true)
         }
     }
-
+    
 }

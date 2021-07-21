@@ -1,6 +1,6 @@
 # PhotoResizingFiltering
 
-### This is an `iOS App` project where user can their resize photo and use filter to photo. Also user can save resizing or filtering photo in their Photo Library. Here I'm using some basic filtering for practicing purposes.
+### This is an `iOS App` project where user can resize their photo and use filter to photo. Also user can save resizing or filtering photo in their Photo Library. Here I'm using some basic filtering for practicing purposes.
 
 ## Requirements
   - iOS 10.0+

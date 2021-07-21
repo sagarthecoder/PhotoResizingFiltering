@@ -14,22 +14,18 @@ protocol SavePhotoToLibraryDelegate: AnyObject {
 class ResizeView: UIView, UITextFieldDelegate {
     
     @IBOutlet var contentView: UIView!
-    
     @IBOutlet weak var originalPhotoSizeLabel: UILabel!
     @IBOutlet weak var customWidthTextField: UITextField!
-    
     @IBOutlet weak var customHeightTextField: UITextField!
-    
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
+    
     var image : UIImage?
     var photoSize : CGSize?
     weak var delegate : SavePhotoToLibraryDelegate?
-    @IBOutlet weak var imageView: UIImageView!
-    
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //self.frame = frame
         self.nibsetup(frame: frame)
         
     }
@@ -43,7 +39,6 @@ class ResizeView: UIView, UITextFieldDelegate {
         let nib = UINib(nibName: "ResizeView", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
         contentView.frame = frame
-        print("content view check frame = \(contentView.frame)")
         addSubview(contentView)
     }
     
@@ -93,40 +88,27 @@ class ResizeView: UIView, UITextFieldDelegate {
     @IBAction func saveButtonAction(_ sender: UIButton) {
         guard let widthValue = Int(customWidthTextField.text!), let heightValue = Int(customHeightTextField.text!) else {
             fatalError("SomeThing is wrong")
-           // return
+            // return
         }
         if(widthValue <= 0 || heightValue <= 0) {
-//            let alertController = UIAlertController(title: "Save error", message: "Width or Height value cannot be zero or negative", preferredStyle: .alert)
-//            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            //            let alertController = UIAlertController(title: "Save error", message: "Width or Height value cannot be zero or negative", preferredStyle: .alert)
+            //            alertController.addAction(UIAlertAction(title: "OK", style: .default))
             return
         }
-         let resizedImage : UIImage? = self.resizeImage(image: self.image!, newWidth: widthValue, newHeight: heightValue)!
+        let resizedImage : UIImage? = self.resizeImage(image: self.image!, newWidth: widthValue, newHeight: heightValue)!
         if resizedImage != nil {
             delegate?.getPhotoToSave(image: resizedImage!)
         }
     }
     
     func resizeImage(image: UIImage, newWidth: Int, newHeight : Int) -> UIImage? {
-
+        
         UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
         image.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return newImage
     }
-    
-//    func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-//            if let error = error {
-//                // we got back an error!
-//                let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
-//                ac.addAction(UIAlertAction(title: "OK", style: .default))
-//                present(ac, animated: true)
-//            } else {
-//                let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
-//                ac.addAction(UIAlertAction(title: "OK", style: .default))
-//                present(ac, animated: true)
-//            }
-//        }
     
     func textFieldBeganEndEditing(_ textField: UITextField) {
         print("text field began editing called")
@@ -158,10 +140,8 @@ class ResizeView: UIView, UITextFieldDelegate {
         } else {
             textField.resignFirstResponder()
         }
-        //textField.resignFirstResponder()
         return true
     }
-    
     
 }
 

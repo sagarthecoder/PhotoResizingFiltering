@@ -8,32 +8,21 @@
 import UIKit
 class FilterView: UIView {
     
-    
     @IBOutlet var contentView: UIView!
-    
     @IBOutlet weak var noFilterButton: UIButton!
-    
     @IBOutlet weak var sepiaFilterButton: UIButton!
-    
     @IBOutlet weak var blurFilterButton: UIButton!
-    
-    
     @IBOutlet weak var noirFilterButton: UIButton!
-    
     @IBOutlet weak var photoEffectProcessFilterButton: UIButton!
-    
     @IBOutlet weak var filterEffectSlider: UISlider!
-    
-    
     @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var filterEffectValueLabel: UILabel!
     
     let minSepiaFilterValue : Double = 1
     let minBlurFilterValue : Double = 10
     let minPhotoEffectProcessFilterValue : Int = 0
     let minNoirFilterValue : Int = 0
-    
     weak var delegate : SavePhotoToLibraryDelegate?
     
     enum SelectedFilter {
@@ -45,7 +34,6 @@ class FilterView: UIView {
         
     }
     
-    @IBOutlet weak var filterEffectValueLabel: UILabel!
     var image : UIImage?
     var currentFilter = SelectedFilter.NoFilter
     override init(frame: CGRect) {
@@ -54,6 +42,7 @@ class FilterView: UIView {
         self.filterEffectValueLabel.backgroundColor = .clear
         
     }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
@@ -62,12 +51,14 @@ class FilterView: UIView {
         self.filterEffectSlider.isHidden = true
         self.filterEffectValueLabel.isHidden = true
     }
+    
     private func showSlider() {
         self.filterEffectSlider.isHidden = false
         self.filterEffectValueLabel.isHidden = false
         self.setFilterEffectValueLabel()
         
     }
+    
     func processing() {
         self.noFilterButton.backgroundColor = .red
         self.setSlider()
@@ -78,6 +69,7 @@ class FilterView: UIView {
     private func setImageToImageView() {
         self.imageView.image = image
     }
+    
     private func setupNib(frame : CGRect) {
         let nib = UINib(nibName: "FilterView", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
@@ -95,6 +87,7 @@ class FilterView: UIView {
         self.filterEffectSlider.setValue(value, animated: false)
         self.setFilterEffectValueLabel()
     }
+    
     private func setFilterEffectValueLabel() {
         self.filterEffectValueLabel.text = String(format: "%.2f", filterEffectSlider.value * 100)
     }
@@ -109,7 +102,6 @@ class FilterView: UIView {
         currentFilter = .NoFilter
         self.setFilterEffect()
     }
-    
     
     @IBAction func sepiaFilterButtonAction(_ sender: UIButton) {
         self.filterEffectSlider.minimumValue = Float(minSepiaFilterValue/100.0)
@@ -157,7 +149,6 @@ class FilterView: UIView {
         currentFilter = .PhotoEffectProcessFilter
         self.setFilterEffect()
     }
-    
     
     @IBAction func filterEffectSliderValueChanged(_ sender: UISlider) {
         
@@ -213,13 +204,11 @@ class FilterView: UIView {
         return filterdImage
     }
     
-    
     @IBAction func saveButtonAction(_ sender: UIButton) {
         guard let filteredImage = self.imageView.image else {
             return
         }
         delegate?.getPhotoToSave(image: filteredImage)
     }
-    
     
 }

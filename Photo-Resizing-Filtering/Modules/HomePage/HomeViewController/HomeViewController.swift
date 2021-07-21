@@ -24,10 +24,8 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate & UI
         photoResizingButton.isSelected = false
         photoFilteringButton.isSelected = false
         storeView.backgroundColor = .clear
-        // Do any additional setup after loading the view.
     }
-    
-    
+
     func setImagePickerProperties() {
         
         imagePickerController.sourceType = .photoLibrary
@@ -41,7 +39,6 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate & UI
         self.setImagePickerProperties()
         self.present(imagePickerController, animated: true, completion: nil)
     }
-    
     
     @IBAction func photoFilteringButtonAction(_ sender: Any) {
         photoResizingButton.isSelected = false

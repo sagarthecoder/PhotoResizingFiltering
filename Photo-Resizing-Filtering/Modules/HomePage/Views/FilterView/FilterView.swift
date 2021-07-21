@@ -161,6 +161,7 @@ class FilterView: UIView {
             return
         }
         self.imageView.image = image
+        
         switch currentFilter {
         case .SepiaFilter:
             self.imageView.image = applyFilterTo(filterEffect: Filter(filterName: "CISepiaTone", filterEffectValue: filterEffectSlider.value * 100, filterEffectValueName: kCIInputIntensityKey), image: image)
@@ -182,6 +183,7 @@ class FilterView: UIView {
             self.imageView.image = self.image
             break
         }
+        
     }
     
     private func applyFilterTo(filterEffect : Filter, image : UIImage)->UIImage? {

@@ -52,6 +52,7 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate & UI
             picker.dismiss(animated: true, completion: nil)
             return
         }
+        self.dismiss(animated: true, completion: nil)
         DispatchQueue.global(qos: .userInitiated).async {
             DispatchQueue.main.async {
                 if(self.photoResizingButton.isSelected) {
@@ -61,8 +62,6 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate & UI
                 }
             }
         }
-        self.dismiss(animated: true, completion: nil)
-        
         
     }
     

@@ -89,10 +89,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LZH-no-x83" userLabel="Filter-2 Stack View">
-                    <rect key="frame" x="8" y="158" width="406" height="40"/>
+                    <rect key="frame" x="8" y="158" width="398" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0J-1h-NRH">
-                            <rect key="frame" x="0.0" y="0.0" width="199" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="195" height="40"/>
                             <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
                             <state key="normal" title="Noir"/>
                             <connections>
@@ -100,7 +100,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6d-yb-nrU">
-                            <rect key="frame" x="207" y="0.0" width="199" height="40"/>
+                            <rect key="frame" x="203" y="0.0" width="195" height="40"/>
                             <state key="normal" title="Process Effect"/>
                             <connections>
                                 <action selector="photoEffectProcessFilterButtonAction:" destination="-1" eventType="touchUpInside" id="OWD-dZ-oPf"/>
@@ -113,7 +113,7 @@
                     </constraints>
                 </stackView>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wwm-SR-iX6">
-                    <rect key="frame" x="6" y="208" width="386" height="21"/>
+                    <rect key="frame" x="6" y="208" width="336" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="Oal-Ql-gcm"/>
                     </constraints>
@@ -136,11 +136,11 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hj-oF-Pxq" userLabel="effectValueLabel">
-                    <rect key="frame" x="351" y="202" width="55" height="28"/>
+                    <rect key="frame" x="346" y="202" width="60" height="28"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="55" id="I4p-D4-I7Y"/>
+                        <constraint firstAttribute="width" constant="60" id="I4p-D4-I7Y"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
+                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -151,7 +151,6 @@
                 <constraint firstItem="bO2-zE-JnN" firstAttribute="top" secondItem="hGO-bj-JYQ" secondAttribute="bottom" constant="8" id="5y0-RO-LUI"/>
                 <constraint firstItem="IEw-jZ-1hh" firstAttribute="top" secondItem="Wwm-SR-iX6" secondAttribute="bottom" constant="10" id="9nJ-LM-4Wl"/>
                 <constraint firstItem="IEw-jZ-1hh" firstAttribute="top" secondItem="0Hj-oF-Pxq" secondAttribute="bottom" constant="8" id="GNy-pd-GEA"/>
-                <constraint firstItem="Wwm-SR-iX6" firstAttribute="trailing" secondItem="0Hj-oF-Pxq" secondAttribute="trailing" constant="-16" id="LG8-sy-Tlp"/>
                 <constraint firstItem="LZH-no-x83" firstAttribute="top" secondItem="bO2-zE-JnN" secondAttribute="bottom" constant="8" id="MNG-hF-tZo"/>
                 <constraint firstItem="hGO-bj-JYQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="QxB-Fz-N0k"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="IEw-jZ-1hh" secondAttribute="bottom" constant="60" id="SbY-4A-6Vf"/>
@@ -160,9 +159,10 @@
                 <constraint firstItem="bO2-zE-JnN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Zfz-Jq-t6f"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IEw-jZ-1hh" secondAttribute="trailing" constant="8" id="Zqm-RT-aXs"/>
                 <constraint firstItem="hGO-bj-JYQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="blj-qR-kui"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LZH-no-x83" secondAttribute="trailing" id="dVi-W7-cqG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LZH-no-x83" secondAttribute="trailing" constant="8" id="dVi-W7-cqG"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bO2-zE-JnN" secondAttribute="trailing" constant="8" id="e46-tf-m0X"/>
                 <constraint firstItem="Wwm-SR-iX6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="go9-W7-KYd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Wwm-SR-iX6" secondAttribute="trailing" constant="74" id="j6A-1v-igs"/>
                 <constraint firstItem="LZH-no-x83" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="lRP-NT-hu4"/>
                 <constraint firstItem="Wwm-SR-iX6" firstAttribute="top" secondItem="LZH-no-x83" secondAttribute="bottom" constant="10" id="oA8-Mf-koX"/>
                 <constraint firstItem="IEw-jZ-1hh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="q5R-3x-9MX"/>

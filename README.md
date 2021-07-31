@@ -9,7 +9,7 @@
   
   
 ## How to use
-- just clone or download this project. Then change `team` and `Builder Identifier` from the **Signing & Capabilities** option of Project.
+- just clone or download this project. Then change `team` and `Bundle Identifier` from the **Signing & Capabilities** option of Project.
 -  Now `Build` and Bombed!!!!!
 
 
